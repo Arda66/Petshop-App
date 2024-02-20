@@ -9,8 +9,7 @@ import {
   CategoryScreen,
 } from './src/screens';
 import CustomTabBar from './src/components/CustomButton';
-import {TouchableOpacity} from 'react-native';
-
+import Colors from './src/theme/Colors';
 const Tab = createBottomTabNavigator();
 
 const screenOptions = ({route}) => ({
@@ -27,7 +26,7 @@ const screenOptions = ({route}) => ({
     }
     return <Icon name={iconName} size={size} color={color} />;
   },
-  tabBarActiveTintColor: 'orange', // Active icon color
+  tabBarActiveTintColor: Colors.orange, // Active icon color
   tabBarInactiveTintColor: 'gray', // Inactive icon color
   tabBarLabelStyle: {paddingBottom: 5, fontSize: 12},
   tabBarStyle: {paddingBottom: 10, height: 70, paddingLeft: 70},

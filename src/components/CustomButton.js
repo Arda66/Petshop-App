@@ -2,6 +2,7 @@ import {SafeAreaView, StyleSheet, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {BottomTabBar} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons'; // or any other icon library
+import Colors from '../theme/Colors';
 const CustomTabBar = props => {
   return (
     <>
@@ -32,11 +33,11 @@ const styles = StyleSheet.create({
   customButton: {
     position: 'absolute',
     left: 10,
-    top: -30,
-    width: 60,
-    height: 60,
+    top: -20,
+    width: 55,
+    height: 55,
     borderRadius: 30,
-    backgroundColor: 'orange', // Background color of the floating button
+    backgroundColor: Colors.orange, // Background color of the floating button
     justifyContent: 'center',
     alignItems: 'center',
     elevation: 5,
