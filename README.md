@@ -7,7 +7,7 @@
 
 
 
-# Shopping<br>        
+# Shopping Screen<br>        
 ![Screenshot_1708520833](https://github.com/Arda66/Pawder-Test-Case/assets/61588522/d32ea0a8-fe4c-40a5-abf5-7a07512fc64f)
 
 ![Screenshot_1708520837](https://github.com/Arda66/Pawder-Test-Case/assets/61588522/507c317f-7e12-4b65-80ee-578f1c638ae2)
