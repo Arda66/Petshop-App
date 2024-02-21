@@ -1,5 +1,19 @@
 
-# Pawder App
+# Pawder – Your Pet's Best Friend
+
+Pawder is an intuitive, user-friendly mobile application designed to cater to all your pet's needs. From finding the perfect food to accessories that keep them active and entertained, Pawder ensures that your furry friends are always well taken care of.
+
+## Features
+- **Browse Products**: A vast selection of pet products, including food, toys, and accessories, all at your fingertips.
+- **Shopping Cart**: Add items to your shopping cart and manage quantities as you shop.
+- **Categories**: Discover products sorted into categories for easy navigation.
+- **Deals and Discounts**: Get access to exclusive deals and discounts on premium pet products.
+- **Search Functionality**: Quickly find exactly what you're looking for with our efficient search bar.
+- **Favorites**: Mark products as favorites for quicker access in future shopping sessions.
+- **Order History**: Review your past orders and easily repurchase regular items.
+- **Secure Checkout**: A secure and streamlined checkout process with multiple payment options.
+- **Personalized Recommendations**: Product suggestions tailored to your pet's breed, age, and preferences.
+  
 # Main Menu<br>
 ![image](https://github.com/Arda66/Pawder-Test-Case/assets/61588522/2e06b509-f41d-454f-b896-1bcda8966ee1)
 
