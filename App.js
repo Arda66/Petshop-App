@@ -10,15 +10,21 @@ import {
 } from './src/screens';
 import CustomTabBar from './src/components/CustomButton';
 import Colors from './src/theme/Colors';
+import {Provider} from 'react-redux';
+import {PersistGate} from 'redux-persist/integration/react';
+import {store, persistor} from './src/store';
+import TotalPriceTabLabel from './src/components/TotalPriceTabLabel';
+import getCartCount from './src/components/GetCartCount';
 const Tab = createBottomTabNavigator();
 
 const screenOptions = ({route}) => ({
+  tabBarBadge: route.name === 'Shopping' ? getCartCount() : undefined,
   tabBarIcon: ({focused, color, size}) => {
     let iconName;
     if (route.name === 'MainMenu') {
       iconName = focused ? 'home' : 'home-outline';
     } else if (route.name === 'Shopping') {
-      iconName = focused ? 'cart' : 'cart-outline';
+      iconName = 'cart-outline';
     } else if (route.name === 'Categories') {
       iconName = focused ? 'grid' : 'grid-outline';
     } else if (route.name === 'Assistant') {
@@ -35,32 +41,42 @@ const screenOptions = ({route}) => ({
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-        screenOptions={screenOptions}
-        tabBar={props => <CustomTabBar {...props} />}>
-        <Tab.Screen
-          name="MainMenu"
-          component={MainMenuScreen}
-          options={{tabBarLabel: 'Ana Sayfa'}}
-        />
-        <Tab.Screen
-          name="Categories"
-          component={CategoryScreen}
-          options={{tabBarLabel: 'Kategoriler'}}
-        />
-        <Tab.Screen
-          name="Shopping"
-          component={ShoppingScreen}
-          options={{tabBarLabel: 'Sepet'}} // buraya daha sonra reduxtaki totalPrice değeri eklenecek dispatch edilip çağırılırken
-        />
-        <Tab.Screen
-          name="Assistant"
-          component={AssistantScreen}
-          options={{tabBarLabel: 'Asistan'}}
-        />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <NavigationContainer>
+          <Tab.Navigator
+            screenOptions={screenOptions}
+            tabBar={props => <CustomTabBar {...props} />}>
+            <Tab.Screen
+              name="MainMenu"
+              component={MainMenuScreen}
+              options={{tabBarLabel: 'Ana Sayfa'}}
+            />
+            <Tab.Screen
+              name="Categories"
+              component={CategoryScreen}
+              options={{tabBarLabel: 'Kategoriler'}}
+            />
+            <Tab.Screen
+              name="Shopping"
+              component={ShoppingScreen}
+              options={{
+                tabBarLabel: () => <TotalPriceTabLabel />,
+                tabBarBadgeStyle: {
+                  backgroundColor: Colors.orange,
+                  color: 'white',
+                },
+              }}
+            />
+            <Tab.Screen
+              name="Assistant"
+              component={AssistantScreen}
+              options={{tabBarLabel: 'Asistan'}}
+            />
+          </Tab.Navigator>
+        </NavigationContainer>
+      </PersistGate>
+    </Provider>
   );
 };
 

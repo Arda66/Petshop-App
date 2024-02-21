@@ -10,5 +10,3 @@ const Assistant = () => {
 };
 
 export default Assistant;
-
-const styles = StyleSheet.create({});

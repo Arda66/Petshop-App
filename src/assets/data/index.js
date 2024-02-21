@@ -3,7 +3,7 @@ const AnnouncementData = [
     id: '1',
     title: 'Royal Canin markalı tüm ürünlerde %20 indirim!',
     image: require('../../assets/images/packshot-mini.png'),
-  }, // Visible data
+  },
   {
     id: '2',
     title: 'Royal Canin markalı tüm ürünlerde %20 indirim!',
@@ -15,6 +15,7 @@ const AnnouncementData = [
     image: require('../../assets/images/packshot-mini.png'),
   },
 ];
+
 const PopularData = [
   {
     id: '1',
@@ -24,6 +25,8 @@ const PopularData = [
     originalPrice: '₺1099',
     discountPrice: '₺799',
     weight: '4kg',
+    seller: 'Sevgi Mama',
+    sellerRating: 4.1,
   },
   {
     id: '2',
@@ -33,6 +36,8 @@ const PopularData = [
     originalPrice: '₺400',
     discountPrice: '₺310',
     weight: '12 x 85 gr',
+    seller: 'Mutlu Pet Shop',
+    sellerRating: 4.2,
   },
   {
     id: '3',
@@ -42,7 +47,28 @@ const PopularData = [
     originalPrice: '₺79',
     discountPrice: '₺59',
     weight: '195 gr',
+    seller: 'Mutlu Pet Shop',
+    sellerRating: 4.2,
   },
 ];
 
-export {PopularData, AnnouncementData};
+const CategoryData = [
+  {
+    id: '1',
+    image: require('../../assets/images/mama-kabı.png'),
+  },
+  {
+    id: '2',
+    image: require('../../assets/images/traş-makinesi.png'),
+  },
+  {
+    id: '3',
+    image: require('../../assets/images/tasma.png'),
+  },
+  {
+    id: '4',
+    image: require('../../assets/images/köpek-topu.png'),
+  },
+];
+
+export {PopularData, AnnouncementData, CategoryData};

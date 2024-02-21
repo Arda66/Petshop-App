@@ -34,16 +34,10 @@ export default Announcement;
 const styles = StyleSheet.create({
   container: {
     marginTop: 24,
-    width: screenWidth - 32, // Adjust container width to fit within screen bounds with some padding
-    padding: 10, // Padding around the content
-    borderRadius: 24, // Rounded corners
-    marginVertical: 10, // Margin top and bottom for spacing
-    elevation: 5, // Shadow for Android
-    shadowColor: 'gray', // Shadow color for iOS
-    shadowOffset: {width: 0, height: 3}, // Shadow offset for iOS
-    shadowOpacity: 0.23, // Shadow opacity for iOS
-    shadowRadius: 2.62, // Shadow radius for iOS
-    flex: 1,
+    width: screenWidth - 32,
+    padding: 10,
+    borderRadius: 24,
+    marginVertical: 10,
   },
   image: {
     width: 100,

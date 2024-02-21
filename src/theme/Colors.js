@@ -6,6 +6,8 @@ const Colors = {
   textLight: '#CDCDCD',
   orange: '#ff7f00',
   darkOrange: '#d8720c',
+  skinColor: '#fbe6d3',
+  lightBackground: '#fbfaff',
 };
 
 export default Colors;
