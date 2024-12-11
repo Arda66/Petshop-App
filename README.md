@@ -1,5 +1,5 @@
 
-# Dog Matching App – Your Pet's Best Friend
+# PetShop App – Your Pet's Best Friend
 
 This intuitive, user-friendly mobile application is designed to cater to your pet's needs. From finding the perfect food to accessories that keep them active and entertained, this mobile app ensures that your furry friends are always well cared for.
 
